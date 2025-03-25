@@ -1,0 +1,3 @@
+[submodule "byos_next"]
+	path = byos_next
+	url = git@github.com:filaraujo/byos_next.git
