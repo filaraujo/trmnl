@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm --prefix byos_next i && pnpm --prefix byos_next build",
+    "build": "npm run prepare && pnpm --prefix byos_next i && pnpm --prefix byos_next build",
     "byos:start": "npm run build && pnpm --prefix byos_next start",
+    "byos:dev": "pnpm --prefix byos_next dev",
     "prepare": "cp .env.local byos_next/",
     "supabase:start": "npx supabase start",
-    "start": "npm run supabase:start && npm run byos:start"
+    "start": "npm run supabase:start && npm run byos:start",
+    "dev": "npm run supabase:start && npm run byos:dev"
   },
   "keywords": [],
   "author": "",
