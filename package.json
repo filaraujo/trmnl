@@ -1,0 +1,17 @@
+{
+  "name": "trmnl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm --prefix byos_next i && pnpm --prefix byos_next build",
+    "byos:start": "npm run build && pnpm --prefix byos_next start",
+    "prepare": "cp .env.local byos_next/",
+    "supabase:start": "npx supabase start",
+    "start": "npm run supabase:start && npm run byos:start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.5"
+}
